@@ -20,7 +20,7 @@ AIO-YTE is an asynchronous template engine for YAML format that extends the YAML
 
 ## Documentation
 
-Comprehensive documentation for AIO-YTE can be found at [aio-yte-template-engine.github.io](https://aio-yte-template-engine.github.io).
+Comprehensive documentation for YTE can be found at [yte-template-engine.github.io](https://yte-template-engine.github.io).
 
 ## Comparison with Other Engines
 

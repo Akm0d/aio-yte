@@ -6,7 +6,7 @@ license = "MIT"
 name = "aio-yte"
 readme = "README.md"
 repository = "https://github.com/yte-template-engine/yte"
-version = "2.0.2"
+version = "2.0.3"
 
 [tool.poetry.dependencies]
 aioconsole = ">=0.8.0"
