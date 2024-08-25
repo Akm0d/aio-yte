@@ -1,4 +1,4 @@
-# YTE - A YAML template engine with Python expressions
+# AIO-YTE - A YAML template engine with Python expressions
 
 [![Docs](https://img.shields.io/badge/user-documentation-green)](https://yte-template-engine.github.io)
 [![test coverage: 100%](https://img.shields.io/badge/test%20coverage-100%25-green)](https://github.com/yte-template-engine/yte/blob/main/pyproject.toml#L30)
@@ -9,7 +9,7 @@
 [![Conda Version](https://img.shields.io/conda/vn/conda-forge/yte.svg)](https://github.com/conda-forge/yte-feedstock)
 
 
-YTE is a template engine for YAML format that utilizes the YAML structure in combination with Python expressions for enabling to dynamically build YAML documents.
+AIO-YTE is an async template engine for YAML format that utilizes the YAML structure in combination with Python expressions for enabling to dynamically build YAML documents.
 
 The key idea of YTE is to rely on the YAML structure to enable conditionals, loops and other arbitrary Python expressions to dynamically render YAML files.
 Python expressions are thereby declared by prepending them with a `?` anywhere in the YAML.
