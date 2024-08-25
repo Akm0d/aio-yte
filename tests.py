@@ -12,13 +12,13 @@ from yte.exceptions import YteError
 
 
 def _process(yaml_str, outfile=None, disable_features=None, require_use_yte=False):
-    return asyncio.run(yte.process_yaml(
+    return yte.process_yaml(
         textwrap.dedent(yaml_str),
         outfile=outfile,
         require_use_yte=require_use_yte,
         disable_features=disable_features,
         variables={"async_function": adouble, "async_condition": acond, "arange": arange},
-    ))
+    )
 
 
 def test_ifelse():
