@@ -1,4 +1,4 @@
-# AIO-YTE - A YAML template engine with Python expressions
+# AIO-YTE - An Asynchronous YAML Template Engine with Python Expressions
 
 [![Docs](https://img.shields.io/badge/user-documentation-green)](https://yte-template-engine.github.io)
 [![test coverage: 100%](https://img.shields.io/badge/test%20coverage-100%25-green)](https://github.com/yte-template-engine/yte/blob/main/pyproject.toml#L30)
@@ -8,29 +8,41 @@
 [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/yte.svg)](https://anaconda.org/conda-forge/yte)
 [![Conda Version](https://img.shields.io/conda/vn/conda-forge/yte.svg)](https://github.com/conda-forge/yte-feedstock)
 
+AIO-YTE is an asynchronous template engine for YAML format that extends the YAML structure with Python expressions, enabling dynamic YAML document generation. The key feature of AIO-YTE is its ability to process Python expressions asynchronously, making it ideal for use in environments that require asynchronous operations, such as web servers or other I/O-bound applications.
 
-AIO-YTE is an async template engine for YAML format that utilizes the YAML structure in combination with Python expressions for enabling to dynamically build YAML documents.
+## Key Features
 
-The key idea of YTE is to rely on the YAML structure to enable conditionals, loops and other arbitrary Python expressions to dynamically render YAML files.
-Python expressions are thereby declared by prepending them with a `?` anywhere in the YAML.
-Any such value will be automatically evaluated by YTE, yielding plain YAML as a result.
-Importantly, YTE templates are still valid YAML files (for YAML, the `?` expressions are just strings).
+- **Asynchronous Evaluation:** AIO-YTE allows you to use `await` within your YAML templates, enabling asynchronous processing of expressions. This is particularly useful in modern Python applications where asynchronous code is prevalent.
+  
+- **YAML-First Approach:** Like its predecessor YTE, AIO-YTE leverages YAML's structure to simplify2the syntax for template expressions, making it more intuitive and human-readable while maintaining YAML's native semantics.
 
-Documentation of YTE can be found at https://yte-template-engine.github.io.
+- **Python Expression Integration:** AIO-YTE integrates Python syntax directly into YAML, allowing you to use conditionals, loops, and other Python expressions seamlessly within your templates.
 
-## Comparison with other engines
+## Documentation
 
-Lots of template engines are available, for example the famous generic [jinja2](https://jinja.palletsprojects.com).
-The reasons to generate a YAML specific engine are
+Comprehensive documentation for AIO-YTE can be found at [aio-yte-template-engine.github.io](https://aio-yte-template-engine.github.io).
 
-1. The YAML syntax can be exploited to simplify template expression syntax, and make it feel less foreign (i.e. fewer special characters for control flow needed) while increasing human readability.
-2. Whitespace handling (which is important with YAML since it has a semantic there) becomes unnecessary (e.g. with jinja2, some [tuning](https://radeksprta.eu/posts/control-whitespace-in-ansible-templates) is required to obtain proper YAML rendering).
+## Comparison with Other Engines
 
-Of course, YTE is not the first YAML specific template engine.
-Others include
+Many template engines are available, such as the popular [jinja2](https://jinja.palletsprojects.com). AIO-YTE is specifically designed for YAML, offering several advantages:
 
-* [Yglu](https://yglu.io)
-* [Emrichen](https://github.com/con2/emrichen)
+1. **YAML-Specific Syntax:** By utilizing YAML's syntax, AIO-YTE reduces the need for additional control flow symbols, making the templates more readable and less foreign to those familiar with YAML.
+2. **Improved Whitespace Handling:** YAML's semantics require careful handling of whitespace, which AIO-YTE manages seamlessly without the need for complex configurations, as might be necessary with engines like jinja2.
 
-The main difference between YTE and these two is that YTE extends YAML with plain Python syntax instead of introducing another specialized language.
-Of course, the choice is also a matter of taste.
+Other YAML-specific template engines include:
+
+- **[Yglu](https://yglu.io)**
+- **[Yte](https://github.com/yte-template-engine/yte)**
+- **[Emrichen](https://github.com/con2/emrichen)**
+
+The main distinction of AIO-YTE is its extension of YAML with native Python syntax and its support for asynchronous operations. This allows for more natural and powerful template processing, particularly in applications that require asynchronous execution.
+
+## Differences Between AIO-YTE and YTE
+
+While AIO-YTE retains the core functionality of YTE, it introduces several key enhancements:
+
+- **Asynchronous Processing:** The primary difference is the ability to handle asynchronous expressions, enabling the use of `await` directly within YAML templates.
+- **Enhanced Error Handling:** AIO-YTE improves error handling, particularly in the context of asynchronous operations, ensuring more robust and predictable template evaluation.
+- **Backwards Compatibility:** AIO-YTE remains compatible with existing YTE templates but extends their capabilities to handle async code, making it a drop-in replacement for applications that require async processing.
+
+By incorporating these features, AIO-YTE is designed to meet the needs of modern Python applications, offering a powerful and flexible template engine for YAML.
