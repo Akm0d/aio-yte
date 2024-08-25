@@ -2,9 +2,9 @@ import sys
 import asyncio
 import yaml
 import plac
-from yte.context import Context
-from yte.process import FEATURES, _process_yaml_value
-from yte.document import Document
+from aio_yte.context import Context
+from aio_yte.process import FEATURES, _process_yaml_value
+from aio_yte.document import Document
 
 
 async def aprocess_yaml(

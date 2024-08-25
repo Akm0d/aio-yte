@@ -1,4 +1,4 @@
-from yte.context import Context
+from aio_yte.context import Context
 from dpath import get as dpath_get
 from dpath import search as dpath_search
 

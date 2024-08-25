@@ -1,18 +1,17 @@
-import asyncio
 import tempfile
-import yte
+import aio_yte
 import textwrap
 import pytest
 import yaml
 import subprocess as sp
-from yte.context import Context
-from yte.document import Document, Subdocument
+from aio_yte.context import Context
+from aio_yte.document import Document, Subdocument
 
-from yte.exceptions import YteError
+from aio_yte.exceptions import YteError
 
 
 def _process(yaml_str, outfile=None, disable_features=None, require_use_yte=False):
-    return yte.process_yaml(
+    return aio_yte.process_yaml(
         textwrap.dedent(yaml_str),
         outfile=outfile,
         require_use_yte=require_use_yte,
